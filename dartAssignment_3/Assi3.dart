@@ -1,5 +1,3 @@
-import 'dart:async';
-
 void main() {
   //Ques1
   List names = ["Muskan", "Nazia", "Alina", "Noureen", "Samreen"];
@@ -271,6 +269,23 @@ void main() {
 
 //Ques21
 
+  Map Person2 = {"Name": "Shabbir", "isAdmin": true, "isActive": false};
+  if (Person2["isAdmin"] == true && Person2["isActive"] == true) {
+    print("Active admin");
+  } else {
+    print("Not an active admin");
+  }
 
+  //----------------------------------------------------------------------
+  //---------------------------------------------------------------------
 
+  //Ques22
+
+  Map ShoppingCart = {"Apple": 4, "Bananas": 7, "Orange": 2};
+  String Product = "Orange";
+  if (ShoppingCart.containsKey(Product)) {
+    print("$Product is present in the Cart");
+  } else {
+    print("$Product is not in the cart");
+  }
 }
