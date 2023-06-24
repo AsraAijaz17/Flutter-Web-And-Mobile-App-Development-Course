@@ -181,4 +181,8 @@ void main() {
 
   //-------------------------------------------------------------------
   //-------------------------------------------------------------------
+  List oldList = ["ab", "cd", "ef", "ghi"];
+  var newlist = List.of(oldList.reversed);
+  print(oldList);
+  print(newlist);
 }
