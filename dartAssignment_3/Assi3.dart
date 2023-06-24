@@ -1,3 +1,5 @@
+import 'dart:async';
+
 void main() {
   //Ques1
   List names = ["Muskan", "Nazia", "Alina", "Noureen", "Samreen"];
@@ -229,7 +231,46 @@ void main() {
   List squaredNumbers = numbListt.map((n) => n * n).toList();
   print(squaredNumbers);
 
-
   //--------------------------------------------------------------
-  //------------------------------------------------------------
+  //--------------------------------------------------------------
+
+  //Ques18
+
+  Map Person = {"Name": "John", "Age": 25, "isStudent": true};
+  if (Person["Age"] > 18 && Person["isStudent"] == true) {
+    print("Eligible");
+  } else {
+    print("Not Eligible");
+  }
+
+  //--------------------------------------------------------------------
+  //--------------------------------------------------------------------
+
+  //Ques19
+  Map ProductInfo = {"Name": "Lays", "Price": "100Rs", "Quantity": 2};
+  if (ProductInfo["Quantity"] > 0) {
+    print(" This Product is in stock");
+  } else {
+    print("This Product is Out Of Stock");
+  }
+
+  //------------------------------------------------------------------
+  //------------------------------------------------------------------
+
+  //Ques20
+
+  Map Car = {"Brand": "Toyota", "Colour": "Red", "isSedan": true};
+  if (Car["Colour"] == "Red" && Car["isSedan"] == true) {
+    print("Match");
+  } else {
+    print("No Match");
+  }
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+
+//Ques21
+
+
+
 }
