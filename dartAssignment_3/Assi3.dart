@@ -181,8 +181,55 @@ void main() {
 
   //-------------------------------------------------------------------
   //-------------------------------------------------------------------
+
+  //Ques12
   List oldList = ["ab", "cd", "ef", "ghi"];
   var newlist = List.of(oldList.reversed);
   print(oldList);
   print(newlist);
+
+  //-------------------------------------------------------------------
+  //-------------------------------------------------------------------
+
+  //Ques14
+  List randomNumbers = [56, 887, 45, 23, 89, 23, 2];
+  List sortedList = [];
+  randomNumbers.forEach((element) {
+    sortedList.add(element);
+  });
+
+  sortedList.sort();
+  print(randomNumbers);
+  print(sortedList);
+
+//------------------------------------------------------------------
+  //Ques15
+
+  List numbers = [23, -45, 31, -45, 89, -34, 23];
+  var PosNum = numbers.where((element) => element > 0);
+  List ListOfPostiveNumbers = PosNum.toList();
+  print(ListOfPostiveNumbers);
+
+  //---------------------------------------------------------------
+  //---------------------------------------------------------------
+
+  //Ques16
+
+  List Numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var FilteringOut = Numberss.where((element) => element % 2 == 0);
+  List EvenNumbers = FilteringOut.toList();
+  print(EvenNumbers);
+
+  //----------------------------------------------------------------
+  //----------------------------------------------------------------
+
+  //Ques17
+
+  List numbListt = [2, 3, 4, 5, 6];
+  List squaredNumbers = numbListt.map((n) => n * n).toList();
+  print(squaredNumbers);
+
+
+  //--------------------------------------------------------------
+  //------------------------------------------------------------
 }
