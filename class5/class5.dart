@@ -93,10 +93,10 @@ void main() {
   List ODDNUMBERS = [];
 
   for (int ii = 0; ii < numbers2.length; ii++) {
-    if (ii % 2 == 0) {
-      EVENNUMBERS.add(ii);
+    if (numbers2[ii] % 2 == 0) {
+      EVENNUMBERS.add(numbers2[ii]);
     } else {
-      ODDNUMBERS.add(ii);
+      ODDNUMBERS.add(numbers2[ii]);
     }
   }
   print("Even Numbers List:$ODDNUMBERS");
