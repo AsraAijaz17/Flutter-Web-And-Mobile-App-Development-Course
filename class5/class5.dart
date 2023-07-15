@@ -138,17 +138,18 @@ void main() {
   //   abc++;
   // }
 
-  // var username = stdin.readLineSync();
-  // var password = stdin.readLineSync();
-  // bool isLogin = false;
-  // while (isLogin == false) {
-  //   if (username == "asra" && password == "123") {
-  //     print("login succ");
-  //     isLogin = true;
-  //   } else {
-  //     print("failed");
-  //     username = stdin.readLineSync();
-  //     password = stdin.readLineSync();
-  //   }
+  var username = stdin.readLineSync();
+  var password = stdin.readLineSync();
+  bool isLogin = false;
+  while (isLogin == false) {
+    if (username == "asra" && password == "123") {
+      print("login succ");
+      isLogin = true;
+    } else {
+      print("failed");
+      username = stdin.readLineSync();
+      password = stdin.readLineSync();
+    }
   // } //dart run class5.dart
+}
 }

@@ -1,6 +1,3 @@
-import dar
-
-
 void main(){
   // int sum=0;
   // List list = [1,23,4,5,6,7,8,9,10];
