@@ -301,6 +301,20 @@ void main() {
 
   //----------------------------------------------------------------------
 
+  //Ques 14
+//   Write a program to make such a pattern like a right angle triangle with 
+// the number increased by 1 using loop..
+
+  // var count = 1;
+  // for (var i = 1; i <= 4; i++) {
+  //   for (var j = 1; j <= i; j++) {
+  //     stdout.write("$count ");
+
+  //     count++;
+  //   }
+  //   print("");
+  // }
+
   //-----------------------------------------------------------------
 
   // ......................... Ques No 17 ..........................
@@ -446,7 +460,7 @@ void main() {
   //------------------------------------------------------------------------
 
   //........................... Ques 20...........................
-//Write a program that counts the number of vowels in a given string 
+//Write a program that counts the number of vowels in a given string
 // using a for loop and if-else condition.
 
   // String str = "saima";
@@ -483,7 +497,7 @@ void main() {
 
   //---------------------------------------------------
   //..........................Ques 21.................................
-//   Implement a code that finds the maximum and minimum elements in a 
+//   Implement a code that finds the maximum and minimum elements in a
 // list using a for loop and if-else condition
 
   // List intLIST = [30, 0, 5, 100, 20];
@@ -503,9 +517,8 @@ void main() {
   //----------------------------------------------------------
 
   //......................Ques No 22.............................
-//   Write a program that calculates the sum of the squares of all odd 
+//   Write a program that calculates the sum of the squares of all odd
 // numbers in a given list using a for loop and if-else condition
-
 
   // List intlist = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   // int sumOfSquares = 0;
@@ -520,7 +533,7 @@ void main() {
 
   //------------------------------------------------------------------------
   //...........................Ques 24.....................................
-//   Implement a code that finds the average of all the negative numbers in 
+//   Implement a code that finds the average of all the negative numbers in
 // a list using a for loop and if-else condition.
 
   // List<int> mixNumbers = [0, 1, -1, 2, -2, 3, -4, 5, -6];
@@ -538,8 +551,8 @@ void main() {
   //-------------------------------------------------------------------
 
   //...........................Ques 25................................
-//   Write a program that takes a list of integers as input and returns a new 
-// list containing only the prime numbers from the original list. Implement 
+//   Write a program that takes a list of integers as input and returns a new
+// list containing only the prime numbers from the original list. Implement
 // the solution using a for loop and logical operations
 
   // List<dynamic> listOfIntegers = [4, 7, 10, 13, 16, 19, 22, 25, 28, 31];
@@ -566,6 +579,4 @@ void main() {
   // }
 
   // print(listOfPrime);
-
-  
 }
