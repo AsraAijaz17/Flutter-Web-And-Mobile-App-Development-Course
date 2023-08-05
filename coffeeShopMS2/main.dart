@@ -1,5 +1,6 @@
 // import 'dart:io';
 import 'Dashboard.dart';
+import 'dart:io';
 // import 'admin.dart';
 
 List adminList = [
@@ -25,14 +26,31 @@ List<Map<String, String>> userInfo = [
   {"fullName": "Aimen", "gmailAccount": "aimen@gmail.com", "Password": "1783"}
 ];
 
+List<Map> Cart = [
+ 
+];
+
 void main() {
   print("--------------------------------------");
   print("Welcome to Coffee Shop Application");
   print("--------------------------------------");
   mainInterface();
-  // int count = 0;
-  // for (var i = 0; i < coffeesList.length; i++) {
-  //   count += 1;
+
+  // List Coffees = [];
+  // for (var i = 0; i < Cart.length; i++) {
+  //   Coffees.add(Cart[i]["coffeeName"]);
   // }
-  // print(count);
+  // print(Coffees);
+
+  // for (var i = 0; i < Coffees.length; i++) {
+  //   var name = Coffees[0];
+  //   int count = 0;
+
+  //   for (var j = 0; j < Coffees.length; j++) {
+  //     if (name == Coffees[j]) {
+  //       count += 1;
+  //     }
+  //   }
+  //   print("$name: $count times");
+  // }
 }

@@ -1,5 +1,7 @@
 import 'Dashboard.dart';
+import 'main.dart';
 
-signOut(){
+signOut() {
+  coffeesList.clear;
   mainInterface();
 }

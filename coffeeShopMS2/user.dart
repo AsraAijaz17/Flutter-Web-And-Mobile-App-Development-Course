@@ -3,6 +3,7 @@ import 'dart:io';
 import 'main.dart';
 import 'Dashboard.dart';
 import 'signout.dart';
+import 'userViewFunc.dart';
 
 user() {
   print("Press 1 for Sign Up ");
@@ -37,14 +38,20 @@ signIn() {
   print("Enter your Password to sign in");
   String Password = stdin.readLineSync()!;
 
+  bool foundd = false;
+
   for (var i = 0; i < userInfo.length; i++) {
     if (Email == userInfo[i]["gmailAccount"] &&
         Password == userInfo[i]["Password"]) {
+      foundd = true;
       userLoggedIn();
     }
   }
-  print("Invalid login credentials. Please try again.");
-  user();
+
+  if (foundd == false) {
+    print("Invalid login credentials. Please try again.");
+    user();
+  }
 }
 
 //---------------------------------------------------
@@ -83,6 +90,10 @@ userLoggedIn() {
     print("======================");
     signOut();
   } else {
-    print("Yahan se tumlg apna kaam add kro Nida or Fatima");
+    userInterface();
   }
+
+//------------------------------------------------------------------
 }
+
+
