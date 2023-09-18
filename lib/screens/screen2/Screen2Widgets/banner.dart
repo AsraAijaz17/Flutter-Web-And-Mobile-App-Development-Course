@@ -10,7 +10,9 @@ class CustomBanner extends StatelessWidget {
       // decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       height: 123,
       width: 269,
-      color: Color(0xffF9B023),
+      // color: Color(0xffF9B023),
+      decoration: BoxDecoration(
+          color: Color(0xFFF9B023), borderRadius: BorderRadius.circular(20.0)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

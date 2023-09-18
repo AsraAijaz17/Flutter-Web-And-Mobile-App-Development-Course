@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterscndpractice/screens/screen2/Screen2Widgets/banner.dart';
 
 class BanerTwo extends StatelessWidget {
   const BanerTwo({super.key});
@@ -7,13 +8,7 @@ class BanerTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-          child: Container(
-        height: 100,
-        width: 300,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0)),
-        color: Colors.amber,
-      )),
+      body: Center(child: CustomBanner()),
     );
   }
 }

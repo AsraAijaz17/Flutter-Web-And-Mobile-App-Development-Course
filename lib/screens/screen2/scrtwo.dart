@@ -15,27 +15,54 @@ class _ScrTwoState extends State<ScrTwo> {
     return const Scaffold(
       body: SafeArea(
           child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomHeaderOne(),
-          //-----------------
-          SizedBox(
-            height: 20,
+          Padding(
+            padding:
+                const EdgeInsets.only(bottom: 20), // Add the desired space here
+            child: CustomHeaderOne(),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
+          //-----------------
+          //  SizedBox(
+          //     height: 20,
+          //   ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  width: 10,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      CustomBanner(),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      CustomBanner()
+                    ],
+                  ),
                 ),
-                CustomBanner(),
+                //--------------------------------
                 SizedBox(
-                  width: 20,
+                  height: 20,
                 ),
-                CustomBanner()
+                Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: Text(
+                    "Recommended",
+                    style: TextStyle(fontSize: 35),
+                  ),
+                ),
+                //--------------------------------
               ],
             ),
-          )
+          ),
+
+          //----------------------------------------
         ],
       )),
     );

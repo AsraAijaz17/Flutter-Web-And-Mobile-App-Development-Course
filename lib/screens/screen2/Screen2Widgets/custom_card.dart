@@ -17,7 +17,7 @@ class CustomCard extends StatelessWidget {
           color: Color(0xffF8F9FB),
           height: 97,
           child: SvgPicture.asset(
-            "assets/images/img.svg",
+            "assets/images/CutLemon.svg",
             color: Color(0xffA1ABC0),
             width: 68,
             height: 68,
