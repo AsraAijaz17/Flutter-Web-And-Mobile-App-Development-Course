@@ -8,7 +8,6 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
       height: 194,
       width: 128,
       color: Color(0xffF8F9FB),
@@ -17,7 +16,7 @@ class CustomCard extends StatelessWidget {
           color: Color(0xffF8F9FB),
           height: 97,
           child: SvgPicture.asset(
-            "assets/images/CutLemon.svg",
+            "assets/images/lemon-citrina.svg",
             color: Color(0xffA1ABC0),
             width: 68,
             height: 68,
