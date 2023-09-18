@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutterscndpractice/screens/screen2/scrtwo.dart';
 
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_container.dart';
@@ -24,6 +25,10 @@ class ScreenOneContent extends StatelessWidget {
             height: 70,
             color: Color(0xff2A4BA0),
             child: CustomButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ScrTwo()));
+                },
                 ButtonText: "Get Started",
                 Width: 253,
                 Height: 70,

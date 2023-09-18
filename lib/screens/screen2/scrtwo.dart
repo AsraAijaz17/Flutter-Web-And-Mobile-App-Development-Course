@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterscndpractice/screens/screen2/Screen2Widgets/banner.dart';
+import 'package:flutterscndpractice/screens/screen2/Screen2Widgets/custom_card.dart';
 import 'package:flutterscndpractice/widgets/custom_header_one.dart';
 
 class ScrTwo extends StatefulWidget {
@@ -27,38 +28,78 @@ class _ScrTwoState extends State<ScrTwo> {
           //     height: 20,
           //   ),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 10,
-                      ),
-                      CustomBanner(),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      CustomBanner()
-                    ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 10,
+                        ),
+                        CustomBanner(),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        CustomBanner()
+                      ],
+                    ),
                   ),
-                ),
-                //--------------------------------
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Text(
-                    "Recommended",
-                    style: TextStyle(fontSize: 35),
+                  //--------------------------------
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-                //--------------------------------
-              ],
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      "Recommended",
+                      style: TextStyle(fontSize: 35),
+                    ),
+                  ),
+                  //--------------------------------
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCard(
+                            ProductName: "Potato",
+                            ProductPrice: "Unit 15",
+                            ProductImage: "assets/images/Potato.svg")
+                        // CustomCard(),
+                        // CustomCard(),
+                        // CustomCard(),
+                        // CustomCard(),
+                      ],
+                    ),
+                  ),
+                  //---------------------------------
+                  Padding(
+                    padding: EdgeInsets.only(left: 15, bottom: 10),
+                    child: Text(
+                      "Deals On Fruits And Tea",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  //--------------------------------
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCard(
+                            ProductName: "Fresh Lemon",
+                            ProductPrice: "Unit 12",
+                            ProductImage: "assets/images/lemon-citrina.svg")
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
 
