@@ -65,9 +65,22 @@ class _ScrTwoState extends State<ScrTwo> {
                     child: Row(
                       children: [
                         CustomCard(
-                            ProductName: "Potato",
+                            ProductName: "Fresh Tomatos",
+                            ProductPrice: "Unit 25",
+                            ProductImage: "assets/images/tomato.svg"),
+                        CustomCard(
+                            ProductName: "Fresh Lemon",
+                            ProductPrice: "Unit 10",
+                            ProductImage: "assets/images/CutLemon.svg"),
+                        CustomCard(
+                            ProductName: "Potatos",
                             ProductPrice: "Unit 15",
-                            ProductImage: "assets/images/Potato.svg")
+                            ProductImage: "assets/images/Potato.svg"),
+                        CustomCard(
+                            ProductName: "Green Tea",
+                            ProductPrice: "Unit 20",
+                            ProductImage: "assets/images/GreenTea.svg"),
+
                         // CustomCard(),
                         // CustomCard(),
                         // CustomCard(),
@@ -94,7 +107,19 @@ class _ScrTwoState extends State<ScrTwo> {
                         CustomCard(
                             ProductName: "Fresh Lemon",
                             ProductPrice: "Unit 12",
-                            ProductImage: "assets/images/lemon-citrina.svg")
+                            ProductImage: "assets/images/lemon-citrina.svg"),
+                        CustomCard(
+                            ProductName: "Fresh Lemon",
+                            ProductPrice: "Unit 12",
+                            ProductImage: "assets/images/lemon-citrina.svg"),
+                        CustomCard(
+                            ProductName: "Fresh Lemon",
+                            ProductPrice: "Unit 12",
+                            ProductImage: "assets/images/lemon-citrina.svg"),
+                        CustomCard(
+                            ProductName: "Fresh Lemon",
+                            ProductPrice: "Unit 12",
+                            ProductImage: "assets/images/lemon-citrina.svg"),
                       ],
                     ),
                   )
