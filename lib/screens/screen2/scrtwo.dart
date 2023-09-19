@@ -105,21 +105,21 @@ class _ScrTwoState extends State<ScrTwo> {
                     child: Row(
                       children: [
                         CustomCard(
-                            ProductName: "Fresh Lemon",
-                            ProductPrice: "Unit 12",
-                            ProductImage: "assets/images/lemon-citrina.svg"),
+                            ProductName: "Bananas",
+                            ProductPrice: "Unit 30",
+                            ProductImage: "assets/images/banana.svg"),
                         CustomCard(
-                            ProductName: "Fresh Lemon",
-                            ProductPrice: "Unit 12",
-                            ProductImage: "assets/images/lemon-citrina.svg"),
+                            ProductName: "Grapes",
+                            ProductPrice: "Unit 32",
+                            ProductImage: "assets/images/grapes.svg"),
                         CustomCard(
-                            ProductName: "Fresh Lemon",
-                            ProductPrice: "Unit 12",
-                            ProductImage: "assets/images/lemon-citrina.svg"),
+                            ProductName: "Coffee Beans",
+                            ProductPrice: "Unit 25",
+                            ProductImage: "assets/images/coffee.svg"),
                         CustomCard(
-                            ProductName: "Fresh Lemon",
+                            ProductName: "Tea",
                             ProductPrice: "Unit 12",
-                            ProductImage: "assets/images/lemon-citrina.svg"),
+                            ProductImage: "assets/images/tea.svg"),
                       ],
                     ),
                   )
