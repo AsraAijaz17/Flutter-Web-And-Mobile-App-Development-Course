@@ -1,7 +1,9 @@
 //First Blue slider Screen
 
 import 'package:flutter/material.dart';
-import 'package:flutterscndpractice/screens/screen1_Home/screenOneCONTENT.dart';
+import 'package:flutterscndpractice/screens/screen1/screenOneCONTENT.dart';
+
+
 
 class PageViewScreen extends StatefulWidget {
   const PageViewScreen({super.key});

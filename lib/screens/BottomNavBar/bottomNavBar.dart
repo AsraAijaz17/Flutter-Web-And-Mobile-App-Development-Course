@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterscndpractice/screens/screen1_Home/page_view_screen.dart';
-
+import 'package:flutterscndpractice/screens/screen2/scrtwo.dart';
 import '../screen3_Categories/categories_screen.dart';
 import '../screen4_Fav/favourite_screen.dart';
 import '../screen5_More/more_screen.dart';
@@ -15,8 +14,8 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _currentIndex = 0; // Initialize the active index as 0 (Home).
 
-  final List<Widget> _screens = [
-    PageViewScreen(),
+  final List<Widget> _screens = const [
+    ScrTwo(),
     CategoryScreen(),
     FavouriteScreen(),
     MoreScreen(),
@@ -33,7 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             _currentIndex = index; // Update the selected index.
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home', // Label for the Home tab.
@@ -51,9 +50,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
             label: 'More', // Label for the More tab.
           ),
         ],
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.grey,
-        backgroundColor: Color.fromARGB(255, 47, 42, 209),
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Color.fromARGB(255, 133, 132, 132),
+        backgroundColor: Color(0xff2A4BA0),
         elevation: 18.0, // Elevation (shadow) of the navigation bar
         type: BottomNavigationBarType
             .fixed, // Required when using labels with more than 3 items

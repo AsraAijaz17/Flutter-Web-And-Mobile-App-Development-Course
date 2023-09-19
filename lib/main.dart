@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterscndpractice/screen_two.dart';
-import 'package:flutterscndpractice/screens/screen1_Home/page_view_screen.dart';
+import 'package:flutterscndpractice/screens/BottomNavBar/bottomNavBar.dart';
+import 'package:flutterscndpractice/screens/screen1/page_view_screen.dart';
 import 'package:flutterscndpractice/screens/screen2/scrtwo.dart';
 
 void main() {
