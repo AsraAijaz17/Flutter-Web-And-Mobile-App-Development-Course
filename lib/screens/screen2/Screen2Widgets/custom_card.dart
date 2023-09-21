@@ -2,16 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomCard extends StatelessWidget {
+class CustomCard extends StatefulWidget {
   final String ProductName;
   final String ProductPrice;
   final String ProductImage;
-  const CustomCard(
-      {super.key,
-      required this.ProductName,
-      required this.ProductPrice,
-      required this.ProductImage});
+  final void Function()? press;
+  // final void Function()? onPressed;
+  // final Function(String, String) onAddToCart;
+  const CustomCard({
+    super.key,
+    required this.ProductName,
+    required this.ProductPrice,
+    required this.ProductImage,
+    this.press,
+  });
 
+  @override
+  State<CustomCard> createState() => _CustomCardState();
+}
+
+class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -28,7 +38,7 @@ class CustomCard extends StatelessWidget {
             color: Color(0xffF8F9FB),
             height: 97,
             child: SvgPicture.asset(
-              ProductImage,
+              widget.ProductImage,
               // color: Color(0xffA1ABC0),
               width: 68,
               height: 68,
@@ -52,7 +62,7 @@ class CustomCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        ProductName,
+                        widget.ProductName,
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.bold),
                       ),
@@ -64,7 +74,7 @@ class CustomCard extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: widget.press,
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
                             Color.fromARGB(255, 245, 245, 245)),
@@ -76,7 +86,7 @@ class CustomCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(ProductPrice),
+                        Text(widget.ProductPrice),
                         CircleAvatar(
                           radius: 15,
                           backgroundColor: Color(0xff2A4BA0),

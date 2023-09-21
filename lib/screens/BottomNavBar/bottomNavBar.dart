@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterscndpractice/screens/screen2/scrtwo.dart';
-import '../screen3_Categories/categories_screen.dart';
+import 'package:flutterscndpractice/screens/screen2/SCREENTWO.dart';
+import 'package:flutterscndpractice/screens/screen3_Categories/category_screen.dart';
+
 import '../screen4_Fav/favourite_screen.dart';
 import '../screen5_More/more_screen.dart';
 
@@ -15,8 +16,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _currentIndex = 0; // Initialize the active index as 0 (Home).
 
   final List<Widget> _screens = const [
-    ScrTwo(),
-    CategoryScreen(),
+    ScreenTwoView(),
+    CategoryView(),
     FavouriteScreen(),
     MoreScreen(),
   ];

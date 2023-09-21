@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterscndpractice/screen_two.dart';
-import 'package:flutterscndpractice/screens/BottomNavBar/bottomNavBar.dart';
 import 'package:flutterscndpractice/screens/screen1/page_view_screen.dart';
-import 'package:flutterscndpractice/screens/screen2/scrtwo.dart';
+
+import 'package:flutterscndpractice/screens/screen2/SCREENTWO.dart';
 
 void main() {
   runApp(const MyApp());
