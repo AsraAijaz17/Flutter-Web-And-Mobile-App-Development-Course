@@ -7,6 +7,8 @@ class CustomCard extends StatefulWidget {
   final String ProductPrice;
   final String ProductImage;
   final void Function()? press;
+  final void Function()? IcononPressed;
+  final Color? Iconcolor;
   // final void Function()? onPressed;
   // final Function(String, String) onAddToCart;
   const CustomCard({
@@ -15,6 +17,8 @@ class CustomCard extends StatefulWidget {
     required this.ProductPrice,
     required this.ProductImage,
     this.press,
+    this.IcononPressed,
+    this.Iconcolor,
   });
 
   @override
@@ -54,17 +58,33 @@ class _CustomCardState extends State<CustomCard> {
             width: 128,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        widget.ProductName,
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
+                      Row(
+                        children: [
+                          Text(
+                            widget.ProductName,
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          Spacer(),
+                          InkWell(
+                            onTap: widget.IcononPressed,
+                            child: Icon(
+                              Icons.favorite,
+                              size: 25,
+                              color: widget.Iconcolor,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 7,
+                          )
+                        ],
                       ),
                       Text(
                         "Organic",

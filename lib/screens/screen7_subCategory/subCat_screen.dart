@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutterscndpractice/data/categories_list.dart';
+import 'package:flutterscndpractice/data/subcategory_list.dart';
+import 'package:flutterscndpractice/screens/Screen8_SubCategoryITEMS/subCatItems_View.dart';
 import 'package:flutterscndpractice/screens/screen6_Cart/my_cart.dart';
-import 'package:flutterscndpractice/screens/screen7_subCategory/subCat_screen.dart';
+import 'package:flutterscndpractice/screens/screen7_subCategory/subCat_Cards.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../DATA/cart.dart';
-import 'categorycards.dart';
 
-class CategoryView extends StatefulWidget {
-  const CategoryView({super.key});
+class SubCategoryView extends StatefulWidget {
+  const SubCategoryView({super.key});
 
   @override
-  State<CategoryView> createState() => _CategoryViewState();
+  State<SubCategoryView> createState() => _SubCategoryViewState();
 }
 
-class _CategoryViewState extends State<CategoryView> {
+class _SubCategoryViewState extends State<SubCategoryView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -133,27 +132,85 @@ class _CategoryViewState extends State<CategoryView> {
               ],
             ),
           ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 10, left: 10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 30,
+                    width: 130,
+                    decoration: BoxDecoration(
+                        color: Color(0xffF9B023),
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Center(
+                      child: Text(
+                        "Meats & Fishes",
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Container(
+                      height: 30,
+                      width: 110,
+                      decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 243, 243, 243),
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(color: Colors.black)),
+                      child: Center(
+                        child: Text(
+                          "Vegetables",
+                          style: TextStyle(
+                              color: const Color.fromARGB(255, 35, 35, 35),
+                              fontSize: 12),
+                        ),
+                      )),
+                  SizedBox(width: 5),
+                  Container(
+                      height: 30,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 246, 245, 245),
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(color: Colors.black)),
+                      child: Center(
+                        child: Text(
+                          "Fruits",
+                          style: TextStyle(
+                              color: const Color.fromARGB(255, 31, 31, 31),
+                              fontSize: 12),
+                        ),
+                      ))
+                ],
+              ),
+            ),
+          ),
+          //-------------------------------------------------------------------
+          //----------------------------------------------------------------
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10),
-                  itemCount: CategoryData.length,
+              padding: const EdgeInsets.all(20.0),
+              child: ListView.builder(
+                  itemCount: subCategoryData.length,
                   itemBuilder: (context, index) {
-                    return CategoryCards(
-                        onTap: () async {
-                          await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SubCategoryView()));
-                          setState(() {});
-                        },
-                        CategoryName: CategoryData[index]["CategoryName"],
-                        Origin: CategoryData[index]["Origin"],
-                        CategoryImage: CategoryData[index]["CategoryImage"]);
+                    return SubCategoryCards(
+                      subCategoryName: subCategoryData[index]
+                          ["subCategoryName"],
+                      subCategoryOrigin: subCategoryData[index]
+                          ["subCategoryOrigin"],
+                      PerKg: subCategoryData[index]["PerKg"],
+                      subCategoryImage: subCategoryData[index]
+                          ["subCategoryImage"],
+                      onTap: () async {
+                        await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SubCategoryItemsView()));
+                        setState(() {});
+                      },
+                    );
                   }),
             ),
           )

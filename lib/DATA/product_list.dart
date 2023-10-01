@@ -6,28 +6,32 @@
 
 List productData = [
   {
-    "ProductName": "Fresh Tomatos",
-    "ProductPrice": 700,
+    "ProductName": "Tomatos",
+    "ProductPrice": 56,
     "ProductImage": "assets/images/tomato.svg",
-    "quantity": 0
+    "quantity": 0,
+    "isFav": false
   },
   {
     "ProductName": "Lemon",
-    "ProductPrice": 1000,
+    "ProductPrice": 69,
     "ProductImage": "assets/images/CutLemon.svg",
-    "quantity": 0
+    "quantity": 0,
+    "isFav": false
   },
   {
-    "ProductName": "Fresh Potatoes",
-    "ProductPrice": 500,
+    "ProductName": "Potatoes",
+    "ProductPrice": 49,
     "ProductImage": "assets/images/Potato.svg",
-    "quantity": 0
+    "quantity": 0,
+    "isFav": false
   },
   {
     "ProductName": "Green Tea",
-    "ProductPrice": 700,
+    "ProductPrice": 30,
     "ProductImage": "assets/images/GreenTea.svg",
-    "quantity": 0
+    "quantity": 0,
+    "isFav": false
   },
 ];
 

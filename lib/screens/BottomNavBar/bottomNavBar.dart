@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterscndpractice/DATA/subcategory_list.dart';
 import 'package:flutterscndpractice/screens/screen2/SCREENTWO.dart';
 import 'package:flutterscndpractice/screens/screen3_Categories/category_screen.dart';
+import 'package:flutterscndpractice/screens/screen7_subCategory/subCat_screen.dart';
 
 import '../screen4_Fav/favourite_screen.dart';
 import '../screen5_More/more_screen.dart';
@@ -19,7 +21,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     ScreenTwoView(),
     CategoryView(),
     FavouriteScreen(),
-    MoreScreen(),
+    // MoreScreen(),
   ];
 
   @override
@@ -46,10 +48,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             icon: Icon(Icons.favorite),
             label: 'Favorite', // Label for the Favorite tab.
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.more),
-            label: 'More', // Label for the More tab.
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.more),
+          //   label: 'More', // Label for the More tab.
+          // ),
         ],
         selectedItemColor: Colors.white,
         unselectedItemColor: Color.fromARGB(255, 133, 132, 132),

@@ -42,7 +42,7 @@ class CustomContainer extends StatelessWidget {
               "There's something for everyone                   to enjoy with Sweet Shop                         Favourites Screen 1",
               style: TextStyle(color: Color(0xffB2BBCE)),
             ),
-          )
+          ),
         ],
       ),
     );

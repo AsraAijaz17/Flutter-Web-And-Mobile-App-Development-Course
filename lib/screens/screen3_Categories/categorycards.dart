@@ -5,45 +5,49 @@ class CategoryCards extends StatelessWidget {
   final String CategoryName;
   final String Origin;
   final String CategoryImage;
+  final void Function()? onTap;
 
   const CategoryCards({
     super.key,
     required this.CategoryName,
     required this.Origin,
-    required this.CategoryImage,
+    required this.CategoryImage, this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 154,
-      height: 164,
-      decoration: BoxDecoration(
-          color: Color.fromARGB(255, 210, 211, 213),
-          borderRadius: BorderRadius.circular(10)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            child: SvgPicture.asset(
-              CategoryImage,
-              height: 68,
-              width: 68,
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: 154,
+        height: 164,
+        decoration: BoxDecoration(
+            color: Color.fromARGB(255, 210, 211, 213),
+            borderRadius: BorderRadius.circular(10)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              child: SvgPicture.asset(
+                CategoryImage,
+                height: 68,
+                width: 68,
+              ),
             ),
-          ),
-          Divider(
-            color: const Color(0xffE0E2EE),
-            thickness: 1.0,
-            height: 20, // Adjust the height as needed
-            indent: 16.0, // Adjust the indent as needed
-            endIndent: 16.0, // Adjust the endIndent as needed
-          ),
-          Text(
-            CategoryName,
-            style: TextStyle(fontWeight: FontWeight.w700),
-          ), //categoryName Pass here
-          Text(Origin) //CategoryOrigin pass here
-        ],
+            Divider(
+              color: const Color(0xffE0E2EE),
+              thickness: 1.0,
+              height: 20, // Adjust the height as needed
+              indent: 16.0, // Adjust the indent as needed
+              endIndent: 16.0, // Adjust the endIndent as needed
+            ),
+            Text(
+              CategoryName,
+              style: TextStyle(fontWeight: FontWeight.w700),
+            ), //categoryName Pass here
+            Text(Origin) //CategoryOrigin pass here
+          ],
+        ),
       ),
     );
   }

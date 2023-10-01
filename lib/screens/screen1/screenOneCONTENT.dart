@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutterscndpractice/screens/BottomNavBar/bottomNavBar.dart';
 
-
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_container.dart';
 
@@ -21,6 +20,7 @@ class ScreenOneContent extends StatelessWidget {
             height: 129,
             width: 129,
           ),
+          
           Container(
             width: 253,
             height: 70,

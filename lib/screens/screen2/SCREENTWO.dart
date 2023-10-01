@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutterscndpractice/DATA/favouriteList.dart';
 import 'package:flutterscndpractice/screens/screen2/Screen2Widgets/banner.dart';
 import 'package:flutterscndpractice/widgets/custom_header_one.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../DATA/Deals.dart';
+import '../../DATA/cart.dart';
 import '../../DATA/product_list.dart';
 import '../screen6_Cart/my_cart.dart';
 import 'Screen2Widgets/custom_card.dart';
@@ -91,8 +93,7 @@ class _ScreenTwoViewState extends State<ScreenTwoView> {
                                 await Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) =>
-                                        MyCart(items: cartItems),
+                                    builder: (context) => MyCart(items: cart),
                                   ),
                                 );
                                 setState(() {});
@@ -107,7 +108,7 @@ class _ScreenTwoViewState extends State<ScreenTwoView> {
                               backgroundColor: Colors.red,
                               radius: 12, // Adjust the radius as needed
                               child: Text(
-                                cartItems.length.toString(),
+                                cart.length.toString(),
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
@@ -238,28 +239,46 @@ class _ScreenTwoViewState extends State<ScreenTwoView> {
                         ProductName:
                             productData[index]["ProductName"].toString(),
                         ProductPrice:
-                            productData[index]["ProductPrice"].toString(),
+                            "\$${productData[index]["ProductPrice"].toString()}",
                         ProductImage: productData[index]["ProductImage"],
+                        IcononPressed: () {
+                          setState(() {
+                            if (productData[index]["isFav"] == true) {
+                              productDataTwo[index]["isFav"] = false;
+
+                              wishlist.remove(productData[index]);
+                              print(wishlist);
+                            } else {
+                              productData[index]["isFav"] = true;
+                              wishlist.add(productData[index]);
+                              print(wishlist);
+                            }
+                          });
+                        },
+                        Iconcolor: productData[index]["isFav"] == true
+                            ? Colors.red
+                            : Colors.grey,
                         press: () {
                           setState(() {
                             // Find the index of the selected item in cartItems
-                            int cartIndex = cartItems.indexWhere((item) =>
+                            int cartIndex = cart.indexWhere((item) =>
                                 item["ProductName"] ==
                                 productData[index]["ProductName"]);
 
                             if (cartIndex != -1) {
                               // If item is already in cart, increase its quantity
-                              cartItems[cartIndex]["quantity"] += 1;
+                              cart[cartIndex]["quantity"] += 1;
                             } else {
                               // If item is not in cart, add it with quantity 1
                               Map<String, dynamic> newItem =
                                   Map.from(productData[index]);
                               newItem["quantity"] = 1;
-                              cartItems.add(newItem);
+                              cart.add(newItem);
                             }
 
-                            print(cartItems);
+                            print(cart);
                           });
+
 //=------------------------------------------------------------------------------
                         },
                       );
@@ -286,27 +305,44 @@ class _ScreenTwoViewState extends State<ScreenTwoView> {
                         ProductName:
                             productDataTwo[index]["ProductName"].toString(),
                         ProductPrice:
-                            productDataTwo[index]["ProductPrice"].toString(),
+                            "\$${productDataTwo[index]["ProductPrice"].toString()}",
                         ProductImage: productDataTwo[index]["ProductImage"],
+                        IcononPressed: () {
+                          setState(() {
+                            if (productDataTwo[index]["isFav"] == true) {
+                              productDataTwo[index]["isFav"] = false;
+
+                              wishlist.remove(productDataTwo[index]);
+                              print(wishlist);
+                            } else {
+                              productDataTwo[index]["isFav"] = true;
+                              wishlist.add(productDataTwo[index]);
+                              print(wishlist);
+                            }
+                          });
+                        },
+                        Iconcolor: productDataTwo[index]["isFav"] == true
+                            ? Colors.red
+                            : Colors.grey,
                         press: () {
                           setState(() {
                             // Find the index of the selected item in cartItems
-                            int cartIndex = cartItems.indexWhere((item) =>
+                            int cartIndex = cart.indexWhere((item) =>
                                 item["ProductName"] ==
                                 productDataTwo[index]["ProductName"]);
 
                             if (cartIndex != -1) {
                               // If item is already in cart, increase its quantity
-                              cartItems[cartIndex]["quantity"] += 1;
+                              cart[cartIndex]["quantity"] += 1;
                             } else {
                               // If item is not in cart, add it with quantity 1
                               Map<String, dynamic> newItem =
                                   Map.from(productDataTwo[index]);
                               newItem["quantity"] = 1;
-                              cartItems.add(newItem);
+                              cart.add(newItem);
                             }
 
-                            print(cartItems);
+                            print(cart);
                           });
 
                           //-----------------Text And Cards-----------------------
